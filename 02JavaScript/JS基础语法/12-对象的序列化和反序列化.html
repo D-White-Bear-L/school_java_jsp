@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>对象的序列化和反序列化</title>
+	</head>
+	<body>
+	</body>
+	<!-- 
+		对象的序列化和反序列化
+			// 序列化对象，将对象转为字符串
+			JSON.stringify(object);
+			
+			// 反序列化，将一个Json字符串转换为对象。
+			JSON.parse(jsonStr);
+			
+		this
+			this指的是，调用函数的那个对象。
+			
+	 -->
+	 
+	 <script type="text/javascript">
+	 	var obj = {
+	 		uname:"zhangsan", // 字符串
+	 		uage:18, // 数值
+	 		islike:true, // 布尔值
+	 		sayHello:function(){ // 函数
+	 			console.log("Hello...");
+	 		},
+	 		cats:['大毛','喵喵'], // 数组
+	 		dog:{ // 对象
+	 			name:"张二狗",
+	 			age:1
+	 		}
+	 	};
+		console.log(obj);
+		
+		// 序列化对象，将对象转为字符串 JSON.stringify(object);
+		var str = JSON.stringify(obj);
+		console.log(str);
+		
+		// 反序列化，将一个Json字符串转换为对象。JSON.parse(jsonStr);
+		var obj2 = JSON.parse(str);
+		console.log(obj2);
+		
+		console.log("======this======");
+		// 在函数中使用
+		function test () {
+			this.x = 1;
+			console.log(this.x);
+		}
+		test(); // 调用者是window对象
+		console.log(x); // 相当于定义在全局对象上的属性
+		console.log(this);
+		 
+		// 在对象中使用
+		var o = {
+			name : '张三',
+			age : 20,
+			sayHello : function () {
+				console.log(this.name)
+				console.log(this)
+			}
+		}
+		o.sayHello(); // 调用者是o这个对象
+		
+	 </script>
+</html>

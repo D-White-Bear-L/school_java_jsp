@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文本</title>
+		
+		<style type="text/css">
+			/* 文本 */
+			/* id选择器 */
+			#div1 {
+				/* color 字体颜色 */
+				/* color: blue; */
+				/* color: #0000FF; */
+				color: rgb(255,0,0);
+			}
+			
+			#div2{
+				/* 对齐方式 */
+				/* text-align: left; */  /* 左对齐，默认*/
+				/* text-align: center; */ /* 居中对齐*/
+				text-align: right;   /* 右对齐*/
+			}
+			
+			#div3 {
+				/* 文本修饰  text-decoration   */
+				/* 设置上划线 */
+				text-decoration: overline;
+				/* 设置下划线 */
+				text-decoration: underline;
+				/* 设置中划线 */
+				text-decoration: line-through;
+			}
+			
+			#div4 {
+				/* 同时设置元素的上、中、下划线 */
+				text-decoration: overline underline line-through;  
+			}
+			
+			a {
+				/* 去除文本修饰 */
+				text-decoration: none;
+			}
+			
+			#p1 {
+				/* 设置首行缩进 em：一个文字的高度 */
+				text-indent: 4em;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		
+		<div id="div1">文本1</div>
+		<div id="div2">文本2</div>
+		<div id="div3">文本3</div>
+		<p id="div4">文本4</p>
+		
+		<a href="">超链接</a>
+		
+		<p id="p1">这是一段文字，我们需要进行首行缩进</p>
+		
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS的使用</title>
+		<!-- 引入外部的css文件 -->
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<!-- 定义内部样式 -->
+		<style type="text/css">
+			/* p标签 */
+			p {
+				color: blue;
+				font-family: 楷体;
+			}
+			
+		</style>
+		
+	</head>
+	<!-- 
+		CSS的使用
+		 1. 行内样式
+			将样式定义在html标签上的style属性中；
+			以行内压样式写的CSS耦合度较高。
+		 
+		 2. 内部样式
+			定义在head标签中的sty标签中
+		 
+		 3. 外部样式
+			通过link标签引入外部的css文件
+			<link rel="stylesheet" type="text/css" href="css/style.css"/>
+				rel：当前文件与引入的文件之间的关系
+				type：类型，css类型
+				href：引入的资源的路径
+		
+		CSS的优先级：就近原则
+	 -->
+	<body>
+		<p style="color: aqua;" >这是一段文本</p>
+		<p >这是一段文本</p>
+		<p >这是一段文本</p>
+		<p >这是一段文本</p>
+	</body>
+</html>

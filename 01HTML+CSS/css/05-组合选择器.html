@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>组合选择器</title>
+		<!--
+			组合选择器
+				后代选择器（以空格分隔）
+					选择指定元素的所有的后代元素
+					指定元素  指定元素 {
+						属性名:属性值
+						...
+					}
+				子代选择器（以大于号分隔）
+					选择指定元素的第一代元素
+				相邻兄弟选择器（以加号分隔）
+					选择指定元素的相邻的下一个指定元素 （只会向下找一个）
+				普通兄弟选择器（以波浪号分隔）
+					选择指定元素后的指定同级元素 （只会向下找）
+		 -->
+		 <style type="text/css">
+		 	/* 后代选择器（以空格分隔） */
+			/* .food li {
+				border: 1px solid orchid;
+			} */
+			
+			/* 子代选择器（以大于号分隔 */
+			.food > li {
+				border: 1px solid orchid;
+			}
+			
+			/* 相邻兄弟选择器（以加号分隔） */
+			#d + div {
+				color: #FF0000;
+			}
+			
+			/* 普通兄弟选择器（以波浪号分隔） */
+			#t ~ li {
+				color: blue;
+			}
+			
+		 </style>
+	</head>
+	
+	<body>
+		
+		<h3>食物</h3>
+		<ul class="food">
+		    <li>水果
+		        <ul>
+		            <li>香蕉</li>
+		            <li>苹果</li>
+		            <li>梨</li>
+		        </ul>
+		    </li>
+		    <li>蔬菜
+		        <ul>
+		            <li>白菜</li>
+		            <li>油菜</li>
+		            <li>卷心菜</li>
+		        </ul>
+		    </li>
+		</ul>
+		
+		<div id="d">
+		    相邻兄弟选择器1
+		    <ul>
+		        <li>开心麻花</li>
+		        <li>贾玲</li>
+		        <li>宋小宝</li>
+		    </ul>
+		</div>
+		<div>
+		    相邻兄弟选择器2
+		</div>
+		<div>
+		    相邻兄弟选择器3
+		</div>
+		<p>相邻兄弟选择器4</p>
+		
+		<div>
+		    普通兄弟选择器1
+		    <ul>
+				<li>zhangsan</li>
+		        <li id="t">开心麻花</li>
+		        <li>贾玲</li>
+		        <li>宋小宝</li>
+		        <li>沈腾</li>
+		        <li>王宁</li>
+		    </ul>
+		</div>
+		
+	</body>
+</html>
