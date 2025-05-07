@@ -5,7 +5,7 @@
 		<title>提交表单</title>
 	</head>
 	<body>
-		<form id='myform1' name="myform2" action="http://www.baidu.com" method="get" >	
+		<form id='myform1' name="myform2" action="http://www.baidu.com" method="get" >
 			姓名：<input  type="text"  id="uname"/>
 			<input type="button" value="提交表单" onclick="submitForm()" />
 		</form>
@@ -13,6 +13,8 @@
 		<form id='myform2' action="http://www.baidu.com" method="get" >
 			姓名：<input  type="text"  id="uname2"/>
 			<input type="submit" value="提交表单" onclick="return submitForm2();" />
+			<!-- 一般不写return而是直接绑定点击事件就可以了，如下： -->
+			<!-- <input type="submit" value="提交表单" onclick="submitForm2()" /> -->
 		</form>
 		
 		<hr >
@@ -24,7 +26,7 @@
 	<!-- 
 		提交表单
 			（1）使用普通button按钮+onclick事件+事件中编写代码:
-				 获取表单.submit();
+				 获取表单.submit(); 
 		
 			（2）使用submit按钮 + onclick="return 函数()" +函数编写代码: 
 		​		 最后必须返回：return true|false;
@@ -46,7 +48,7 @@
 			var uname = document.getElementById("uname").value;
 			if (uname == null || uname.trim() == "") {
 				// 结束
-				return;
+				return; // 不响应
 			}
 			// 提交表单
 			document.getElementById("myform1").submit();

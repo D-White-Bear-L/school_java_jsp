@@ -64,7 +64,7 @@
 			var uname = $("uname").value;
 			if (isEmpty(uname)) {
 				// 通过innerHTML赋值
-				$("validate").innerHTML = '用户名不能为空！';
+				$("validate").innerHTML = '用户名不能为空！'; // 通过innerHTML赋值，产生div文字显示
 				return;
 			}
 			if (uname.length < 6 || uname.length > 12) {

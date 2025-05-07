@@ -25,20 +25,22 @@
 		var form1 = document.form1;
 		console.log(form1);
 		// 2、document.getElementById(表单 id);
-		var form2 = document.getElementById("form2");
-		console.log(form2);
+		var form2 = document.getElementById("form2"); //getElementById() 方法返回带有指定 ID 的元素。
+		console.log(form2); //form2
 		
 		// 得到当前文档中的表单集合
-		var forms = document.forms;
-		console.log(forms);
+		var forms = document.forms; //forms 属性返回文档中的所有表单。
+		console.log(forms);  //HTMLCollection(2) [form, form]
+		console.log(forms[0]); //form1
+		console.log(forms[1]); //form2
 		
 		// 3、document.forms[表单名称]
-		var form3 = forms['form1'];
-		console.log(form3);
+		var form3 = forms['form1']; //[] 方括号用于访问对象的属性。
+		console.log(form3);   //form1
 		
 		// 4、document.forms[索引]; //从 0 开始
-		var form4 = forms[0];
-		console.log(form4);
+		var form4 = forms[0]; //[] 方括号用于访问对象的属性。
+		console.log(form4);   //form1
 		
 	 </script>
 </html>
