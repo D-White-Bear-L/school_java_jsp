@@ -1,6 +1,6 @@
 java实践课-jsp
 
-## 项目概述
+## 概述
 这是一个Java实践课项目，涵盖了前端技术（HTML、CSS、JavaScript、jQuery、Ajax）和后端技术（JSP、Java）。
 
 ## 文件夹结构
